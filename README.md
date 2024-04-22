@@ -1,29 +1,38 @@
 # Analysis-of-Happiness-Determinants-in-Portugal
-This project analyzes happiness determinants in Portugal using 2018 ESS data, focusing on factors like health and income. Through SAS logistic regression and statistical testing, we identified key influences on happiness. The results, visualized through charts and tables, offer insights for enhancing societal well-being.
+This project analyzes happiness determinants in Portugal using 2018 ESS data, focusing on factors like health and income.
+##Project Objectives:
 
-1. Data Preprocessing:
+Primary Goal: Leverage the European Social Survey data to uncover key drivers of happiness in Portugal, providing actionable insights for social policy development.
+
+##1. Data Preprocessing:
 Data Cleaning and Transformation:
-Variable Recoding: Utilized PROC FORMAT to redefine categorical variables into more interpretable forms. For instance, happiness levels were transformed into a binary variable, 'is_happy', through dichotomization.
+
+Variable Recoding: Utilized PROC FORMAT to redefine categorical variables into more interpretable forms, including transforming happiness levels into a binary variable, 'is_happy', through dichotomization.
 Data Integrity Checks: Employed PROC MEANS and PROC FREQ to perform exploratory data analysis, ensuring data quality, assessing the distribution of variables, and identifying outliers.
-Handling of Missing Values: Missing data strategies were implemented using PROC STDIZE (for imputation) and conditional processing to ensure the robustness of the analyses. Cases with extensive missing data were excluded using listwise deletion to maintain the validity of the regression models.
-2. Statistical Techniques:
+Handling of Missing Values: Implemented missing data strategies using PROC STDIZE for imputation and conditional processing to maintain the validity of the regression models. Extensive missing cases were excluded via listwise deletion.
+##2. Statistical Techniques:
 Logistic Regression Analysis:
+
 Model Building and Refinement: Constructed the logistic regression model using PROC LOGISTIC, incorporating predictor variables and interaction terms to explore their effects on happiness.
-Statistical Testing for Model Validation: Performed hypothesis testing using PROC LOGISTIC options to include Wald tests for the assessment of the significance of each predictor in the model.
-3. Objectives and Validation of Findings:
-Project Objectives:
-Primary Goal: To leverage the European Social Survey data to uncover key drivers of happiness in Portugal, thereby providing actionable insights for social policy development.
-Verification of Results:
-Model Diagnostic Checks: Conducted goodness-of-fit tests and residual analysis using PROC LOGISTIC to verify the adequacy of the model fit. Techniques such as the Hosmer-Lemeshow test were specifically considered to evaluate model goodness-of-fit.
-Outcome Verification: Examined the magnitude and significance of the odds ratios, calculated within PROC LOGISTIC, to measure the effect sizes of the predictors on the probability of reporting happiness.
-4. Measurement of Uncertainty and Empirical Validation:
+###Statistical Testing for Model Validation: Conducted hypothesis testing using options within PROC LOGISTIC to perform *Wald tests* for assessing the significance of each predictor.
+3. Validation of Findings:
+
+Model Diagnostic Checks: Utilized goodness-of-fit tests and residual analysis to verify the adequacy of the model fit, including specific evaluations like the Hosmer-Lemeshow test.
+Outcome Verification: Analyzed the magnitude and significance of the odds ratios to measure the effect sizes of the predictors on the probability of reporting happiness.
+##4. Measurement of Uncertainty and Empirical Validation:
 Uncertainty Assessment:
-Confidence Intervals and P-Values: Generated using PROC LOGISTIC, which provides detailed output including odds ratios, confidence intervals, and p-values for each factor in the model, allowing for precise interpretation of results.
+
+Confidence Intervals and P-Values: Generated using PROC LOGISTIC, providing detailed output including odds ratios, confidence intervals, and p-values for precise interpretation.
 Empirical Comparison:
-Benchmarking Against Prior Studies: Compared findings with existing research by incorporating external benchmarks and previous study results to substantiate the reliability and validity of the conclusions.
+Benchmarking Against Prior Studies: Validated findings by comparing with external benchmarks and previous research to substantiate the reliability and validity of the conclusions.
 Additional Tools and Techniques Used:
-PROC SQL: Used for data manipulation tasks such as joining tables, creating new variables, and subsetting data, which facilitated more complex data arrangements and pre-analysis preparations.
-PROC RANK and PROC UNIVARIATE: Applied for data normalization and distribution analysis. These procedures helped in understanding the distribution of continuous variables and preparing them for regression analysis.
-PROC GPLOT and PROC SGPLOT: Employed for generating high-quality graphics to visualize the distribution of variables, the relationship between different variables, and the effects of the predictors on the outcome variable.
-Macro Variables: Used extensively to automate repetitive tasks and parameterize parts of the SAS code, enhancing the efficiency and reproducibility of the analysis.
-ODS (Output Delivery System): Configured to direct output to various destinations in different formats, facilitating the creation of well-formatted tables and charts for reporting and presentation purposes.
+PROC SQL: For data manipulation tasks such as joining tables and creating new variables.
+PROC RANK and PROC UNIVARIATE: For data normalization and analyzing distributions.
+PROC GPLOT and PROC SGPLOT: For generating high-quality graphics to visualize the effects of predictors on the outcome variable.
+Macro Variables: Used to automate tasks and enhance the efficiency of the analysis.
+ODS (Output Delivery System): Configured to output results in various formats, aiding in the creation of well-formatted reports.
+Visualizations and Graphics:
+Graphical outputs are crucial for illustrating the findings clearly. This repository includes:
+
+Effect Plots: Visualizing how probabilities of reporting happiness vary with changes in predictors.
+Histograms and Logistic Regression Curves: These plots provide insights into variable distributions and the logistic model's predictions.
