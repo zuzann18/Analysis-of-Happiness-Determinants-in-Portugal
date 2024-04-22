@@ -1,6 +1,6 @@
 # Analysis-of-Happiness-Determinants-in-Portugal
 This project analyzes happiness determinants in Portugal using 2018 ESS data, focusing on factors like health and income.
-##Project Objectives:
+## Project Objectives:
 
 Primary Goal: Leverage the European Social Survey data to uncover key drivers of happiness in Portugal, providing actionable insights for social policy development.
 
